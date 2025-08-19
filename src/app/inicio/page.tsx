@@ -1,4 +1,4 @@
-import Menu from "@/app/components/menu-component/menu";
+import Menu from "@/app/components/menu/menu";
 
 export default function Index() {
     return (

@@ -1,4 +1,3 @@
-import Menu from "../components/menu-component/menu"
 
 export default function Perfil() {
 
