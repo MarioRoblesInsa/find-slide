@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Searcher from "../searcher/searcher";
 import Categories from "../categories/categories";
+
 export default function Menu() {
     return (
         <>

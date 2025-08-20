@@ -10,21 +10,21 @@ export default function Dropdown() {
 
     return (
         <>
-        <div className="">
-      <ul className="flex space-x-6">
-        <li className="relative">
+      <div className="">
+      <ul className={`flex flex-col space-y-2 space-x-6 ${open ? 'bg-red-100 border-t-2 border-red-500' : 'bg-transparent'}`}>
+        <li className="relative w-full">
           <button
           onClick={() => setOpen(!open)}
-            className="text-gray-700 hover:text-blue-600"
+            className={`text-red-500 ${!open ? 'hover:border-t-2' : ''}`}
           >
-            Categorías
+            Todas las categorías
           </button>
+        </li>
         {open && categories.map(({tag, name, id}) => (
         <li key={id} className="">
-          <Link key={id} href={tag} className={`flex md:bg-transparent md:p-0 bg-transparen border-t-2 border-transparent text-red-500 hover:border-t-2 hover:border-red-500 transition bg-transparent`} aria-current="page">{name}</Link>
+          <Link key={id} href={tag} className={`flex md:bg-transparent md:p-0 bg-transparen border-l-2 border-transparent text-red-500 hover:border-l-2 hover:border-red-500 transition bg-transparent`} aria-current="page">{name}</Link>
         </li>
         ))}
-        </li>
       </ul>
         </div>
         </>
