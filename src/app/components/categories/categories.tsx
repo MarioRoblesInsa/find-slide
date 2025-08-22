@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Dropdown from "../dropdown/dropdown";
-import motion from "motion/react";
 export default function Categories() {
     const categories = [
         {id: 1, name: 'Coches', tag: 'coches-de-segunda-mano'},

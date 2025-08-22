@@ -10,9 +10,8 @@ export default function Dropdown() {
 
     return (
         <>
-      <div className="">
-      <ul className={`flex flex-col space-y-2 space-x-6 ${open ? 'bg-red-100 border-t-2 border-red-500' : 'bg-transparent'}`}>
-        <li className="relative w-full">
+      <ul className={`flex flex-col space-y-2 ${open ? 'bg-red-100 border-t-2 border-red-500' : 'bg-transparent'}`}>
+        <li className="relative">
           <button
           onClick={() => setOpen(!open)}
             className={`text-red-500 ${!open ? 'hover:border-t-2' : ''}`}
@@ -26,7 +25,6 @@ export default function Dropdown() {
         </li>
         ))}
       </ul>
-        </div>
         </>
     );
 }
