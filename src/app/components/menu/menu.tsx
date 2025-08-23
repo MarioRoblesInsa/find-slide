@@ -4,6 +4,7 @@ import Searcher from "../searcher/searcher";
 import Categories from "../categories/categories";
 
 export default function Menu() {
+  console.log('render menu')
     return (
         <>
   <nav className="border-gray-200 bg-transparent  mx-auto p-4 flex flex-col md:flex-row items-center gap-4 w-full md:w-full">
