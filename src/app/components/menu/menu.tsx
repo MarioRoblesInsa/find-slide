@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Searcher from "../searcher/searcher";
 import Categories from "../categories/categories";
+import CategoriesNav from "../categories/categories";
 
 export default function Menu() {
   console.log('render menu')
@@ -23,7 +24,7 @@ export default function Menu() {
       type="button">Registrate</button>
     </div>
   </nav>
-  <Categories></Categories>
+  <CategoriesNav></CategoriesNav>
  
         </>
     );
