@@ -1,15 +1,14 @@
 'use client'
 import Image from "next/image";
 import Searcher from "../searcher/searcher";
-import Categories from "../categories/categories";
 import CategoriesNav from "../categories/categories";
 
 export default function Menu() {
   console.log('render menu')
     return (
         <>
-  <nav className="border-gray-200 bg-transparent  mx-auto p-4 flex flex-col md:flex-row items-center gap-4 w-full md:w-full">
-    <div className="flex items-center gap-2 w-full">
+  <nav className="hidden md:border-gray-200 md:bg-transparent  md:mx-auto md:p-4 md:flex md:flex-row md:items-center md:gap-4 md:w-full">
+    <div className="md:flex md:items-center md:gap-2 md:w-full">
     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
       <Image className="bg-red-500" width={50}src="/vercel.svg" height={50} alt="vercel logo" ></Image>
       <span className="self-center text-2xl font-semibold whitespace-nowrap text-red-500">adssada</span>
