@@ -17,9 +17,9 @@ export default function Menu() {
     </div>
     {/* Botones de iniciar sesión, registrarse */}
     <div className="flex space-x-4">
-    <button className="flex-1 rounded-full bg-red-400 text-center px-4 py-2 whitespace-nowrap border-2 border-red-400 hover:bg-transparent hover:text-red-400 transition hover:cursor-pointer"
+    <button className="flex-1 rounded-full bg-red-400 text-center px-4 py-2 whitespace-nowrap border-2 border-red-400 hover:bg-transparent hover:text-red-400 transition hover:cursor-pointer active:scale-95"
       type="button">Iniciar Sesión</button>
-    <button className="flex-1 rounded-full bg-red-400 text-center px-4 py-2 border-2 border-red-400 hover:bg-transparent hover:text-red-400 transition hover:cursor-pointer"
+    <button className="flex-1 rounded-full bg-red-400 text-center px-4 py-2 border-2 border-red-400 hover:bg-transparent hover:text-red-400 transition hover:cursor-pointer active:scale-95"
       type="button">Registrate</button>
     </div>
   </nav>

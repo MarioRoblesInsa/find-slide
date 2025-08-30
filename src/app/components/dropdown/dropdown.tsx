@@ -23,7 +23,7 @@ export default function Dropdown({ open, categories, selectedCategory, setSelect
     return (
       <>
       <ul className="fixed h-full gap-6 pb-28">
-      <ul className={`flex flex-col h-full mt-1.5 bg-red-100 rounded py-2.5 overflow-y-auto custom-scroll ${open ? 'animate-slide-in-top' : ''} transition-all`}>
+      <ul className={`flex flex-col h-full mt-1.5 bg-red-100 rounded py-2.5 overflow-x-hidden overflow-y-auto custom-scroll ${open ? 'animate-slide-in-top' : ''} transition-all`}>
         {open && !selectedCategory && categories.map(({tag, name, id, sub_category}) => {
           return (
           <Link key={id} href={sub_category ? '': tag} className={`flex md:bg-transparent md:p-0 bg-transparen text-red-500 hover:border-red-500 hover:underline transition bg-transparent`} aria-current="page">
