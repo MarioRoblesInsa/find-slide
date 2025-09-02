@@ -1,4 +1,4 @@
-export default function Searcher(){
+export const Searcher = () => {
     return (
         <>
 <div className="flex-grow mx-4">
@@ -19,4 +19,4 @@ export default function Searcher(){
 </div>
         </>
     );
-} 
+};

@@ -1,10 +1,9 @@
-'use client'
-import Image from "next/image";
-import Searcher from "../searcher/searcher";
-import CategoriesNav from "../categories/categories";
+'use client';
+import Image from 'next/image';
+import {Searcher} from '../searcher/searcher';
+import {CategoriesNav} from '../categories/categories';
 
-export default function Menu() {
-  console.log('render menu')
+export const Menu = () => {
     return (
         <>
   <nav className="hidden md:border-gray-200 md:bg-transparent  md:mx-auto md:p-4 md:flex md:flex-row md:items-center md:gap-4 md:w-full">
@@ -25,6 +24,6 @@ export default function Menu() {
   </nav>
   <CategoriesNav></CategoriesNav>
  
-        </>
+</>
     );
-}
+};

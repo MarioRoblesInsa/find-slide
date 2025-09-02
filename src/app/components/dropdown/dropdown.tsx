@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { ChevronDoubleLeftIcon } from "@heroicons/react/16/solid";
-import { ChevronRightIcon } from "@heroicons/react/16/solid";
-import { CategoriesInterface } from "../categories/categories.interface";
+import Link from 'next/link';
+import { ChevronDoubleLeftIcon } from '@heroicons/react/16/solid';
+import { ChevronRightIcon } from '@heroicons/react/16/solid';
+import { CategoriesInterface } from '../categories/categories.interface';
 type DropdownProps = {
   open: boolean;
   categories: CategoriesInterface[];
@@ -10,23 +10,23 @@ type DropdownProps = {
 
 }
 
-export default function Dropdown({ open, categories, selectedCategory, setSelectedCategory }: DropdownProps) {
+export const Dropdown= ({ open, categories, selectedCategory, setSelectedCategory }: DropdownProps) => {
 
 
     const showInfoSubCategory = (id: number | null) => {
-      setSelectedCategory((prev: number | null) => (prev === id ? null : id))
-    }
+      setSelectedCategory((prev: number | null) => (prev === id ? null : id));
+    };
 
     const getCategorySelected = () => {
       return categories.find(cat => cat.id === selectedCategory);
-    }
+    };
     return (
       <>
       <ul className="fixed h-full gap-6 pb-28">
       <ul className={`flex flex-col h-full mt-1.5 bg-red-100 rounded py-2.5 overflow-x-hidden overflow-y-auto custom-scroll ${open ? 'animate-slide-in-top' : ''} transition-all`}>
         {open && !selectedCategory && categories.map(({tag, name, id, sub_category}) => {
           return (
-          <Link key={id} href={sub_category ? '': tag} className={`flex md:bg-transparent md:p-0 bg-transparen text-red-500 hover:border-red-500 hover:underline transition bg-transparent`} aria-current="page">
+          <Link key={id} href={sub_category ? '': tag} className={'flex md:bg-transparent md:p-0 bg-transparen text-red-500 hover:border-red-500 hover:underline transition bg-transparent'} aria-current="page">
           <li key={id} className="flex animate-fade-in-down delay-75 w-72 text-wrap overflow-hidden pl-7 cursor-pointer hover:bg-red-200 py-1.5"
           onClick={sub_category ? () => showInfoSubCategory(id) : undefined}>
             <span>{name}</span>
@@ -35,7 +35,7 @@ export default function Dropdown({ open, categories, selectedCategory, setSelect
           )}
           </li>
           </Link>
-          )
+          );
         })} 
 
       {selectedCategory && open && (
@@ -61,4 +61,4 @@ export default function Dropdown({ open, categories, selectedCategory, setSelect
       </ul>
         </>
     );
-}
+};

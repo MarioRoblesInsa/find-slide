@@ -1,8 +1,8 @@
-import Link from "next/link";
-import Dropdown from "../dropdown/dropdown";
-import { useState } from "react";
-import { CategoriesInterface } from "./categories.interface";
-export default function CategoriesNav() {
+import Link from 'next/link';
+import { Dropdown } from '../dropdown/dropdown';
+import { useState } from 'react';
+import { CategoriesInterface } from './categories.interface';
+export const CategoriesNav = () => {
     const categories: CategoriesInterface[] = [
         {id: 1, name: 'Coches', tag: 'coches-de-segunda-mano', sub_category: undefined},
         {id: 2, name: 'Libros', tag: 'libros-comics-literatura', sub_category: [{id:34, name:'Mangas', tag: 'mangas'}, {id:35, name:'Cómics', tag: 'comics'}, {id:36, name:'Libros de texto', tag: 'libros-texto'}, {id:37, name:'Novelas', tag: 'novelas'}, {id:38, name:'Libros infantiles y juveniles', tag: 'libros-infantiles-juveniles'}, {id:39, name:'Otros libros', tag: 'otros-libros'}]},
@@ -60,8 +60,8 @@ export default function CategoriesNav() {
         </li>
         {categories.slice(0, 10).map(({tag, name, id, sub_category}) => (
         <li key={id} className="overflow-hidden"
-        onClick={() => {setSelectedCategory(id); setOpen(!open)}}>
-          <Link key={id} href={sub_category ? '': tag} className={`relative flex md:bg-transparent md:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100`} aria-current="page">{name}</Link>
+        onClick={() => {setSelectedCategory(id); setOpen(!open);}}>
+          <Link key={id} href={sub_category ? '': tag} className={'relative flex md:bg-transparent md:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100'} aria-current="page">{name}</Link>
         </li>
         ))}
         </ul>
@@ -69,4 +69,4 @@ export default function CategoriesNav() {
     </nav>
     </>
     );
-}
+};
