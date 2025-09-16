@@ -48,8 +48,8 @@ export const CategoriesNav = () => {
     <>
     <nav className="bg-white flex flex-col ml-3.5">
         <div className="flex items-center w-full">
-        <ul className="flex flex-col md:space-x-6 rtl:space-x-reverse md:flex-row md:mt-0">
-        <li className="relative inline-block md:bg-transparent md:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100">
+        <ul className="flex flex-col lg:space-x-6 rtl:space-x-reverse lg:flex-row lg:mt-0">
+        <li className="relative inline-block lg:bg-transparent lg:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100">
           <button
           onClick={() => { setOpen(!open); setSelectedCategory(null); }}
             className={`text-red-500 ${!open ? 'hover:border-t-2' : ''}`}
@@ -58,10 +58,10 @@ export const CategoriesNav = () => {
           </button>
             <Dropdown open={open} categories={categories} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         </li>
-        {categories.slice(0, 10).map(({tag, name, id, sub_category}) => (
+        {categories.slice(0, 10).map(({name, id, sub_category}) => (
         <li key={id} className="overflow-hidden"
         onClick={() => {setSelectedCategory(id); setOpen(!open);}}>
-          <Link key={id} href={sub_category ? '': tag} className={'relative flex md:bg-transparent md:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100'} aria-current="page">{name}</Link>
+          <Link key={id} href={sub_category ? '': `/products/${id}`} className={'relative flex lg:bg-transparent lg:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100'} aria-current="page">{name}</Link>
         </li>
         ))}
         </ul>

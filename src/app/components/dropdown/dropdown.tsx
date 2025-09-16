@@ -26,7 +26,7 @@ export const Dropdown= ({ open, categories, selectedCategory, setSelectedCategor
       <ul className={`flex flex-col h-full mt-1.5 bg-red-100 rounded py-2.5 overflow-x-hidden overflow-y-auto custom-scroll ${open ? 'animate-slide-in-top' : ''} transition-all`}>
         {open && !selectedCategory && categories.map(({tag, name, id, sub_category}) => {
           return (
-          <Link key={id} href={sub_category ? '': tag} className={'flex md:bg-transparent md:p-0 bg-transparen text-red-500 hover:border-red-500 hover:underline transition bg-transparent'} aria-current="page">
+          <Link key={id} href={sub_category ? '': tag} className={'flex lg:bg-transparent lg:p-0 bg-transparen text-red-500 hover:border-red-500 hover:underline transition bg-transparent'} aria-current="page">
           <li key={id} className="flex animate-fade-in-down delay-75 w-72 text-wrap overflow-hidden pl-7 cursor-pointer hover:bg-red-200 py-1.5"
           onClick={sub_category ? () => showInfoSubCategory(id) : undefined}>
             <span>{name}</span>

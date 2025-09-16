@@ -6,8 +6,8 @@ import {CategoriesNav} from '../categories/categories';
 export const Menu = () => {
     return (
         <>
-  <nav className="hidden md:border-gray-200 md:bg-transparent  md:mx-auto md:p-4 md:flex md:flex-row md:items-center md:gap-4 md:w-full">
-    <div className="md:flex md:items-center md:gap-2 md:w-full">
+  <nav className="hidden lg:border-gray-200 lg:bg-transparent  lg:mx-auto lg:p-4 lg:flex lg:flex-row lg:items-center lg:gap-4 lg:w-full">
+    <div className="lg:flex lg:items-center lg:gap-2 lg:w-full">
     <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
       <Image className="bg-red-500" width={50}src="/vercel.svg" height={50} alt="vercel logo" ></Image>
       <span className="self-center text-2xl font-semibold whitespace-nowrap text-red-500">adssada</span>
