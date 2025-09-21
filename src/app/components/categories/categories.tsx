@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Dropdown } from '../dropdown/dropdown';
 import { useState } from 'react';
 import { CategoriesInterface } from './categories.interface';
+import { encodeId } from '@/lib/utils';
 export const CategoriesNav = () => {
     const categories: CategoriesInterface[] = [
         {id: 1, name: 'Coches', tag: 'coches-de-segunda-mano', sub_category: undefined},
@@ -61,7 +62,14 @@ export const CategoriesNav = () => {
         {categories.slice(0, 10).map(({name, id, sub_category}) => (
         <li key={id} className="overflow-hidden"
         onClick={() => {setSelectedCategory(id); setOpen(!open);}}>
-          <Link key={id} href={sub_category ? '': `/products/${id}`} className={'relative flex lg:bg-transparent lg:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100'} aria-current="page">{name}</Link>
+          <Link
+            key={id}
+            href={sub_category ? '' : `/products/${encodeId(id)}`}
+            className={'relative flex lg:bg-transparent lg:p-0 text-red-500 bg-transparent before:bg-red-500 hover:rounded-t-none before:absolute before:-top-0 before:-left-0  before:flex before:h-[2px] before:w-full before:origin-top-right before:scale-x-0 before:transition before:duration-400 before:ease-in-out hover:before:origin-top-left hover:before:scale-x-100'}
+            aria-current="page"
+          >
+            {name}
+          </Link>
         </li>
         ))}
         </ul>
